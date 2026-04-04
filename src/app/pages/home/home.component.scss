@@ -1,0 +1,239 @@
+@use '../../../styles/variables' as *;
+
+// Hero
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+
+  &__container {
+    max-width: $bp-wide;
+    margin: 0 auto;
+    padding: $spacing-xl $spacing-lg;
+    display: flex;
+    align-items: center;
+    gap: $spacing-xl;
+
+    @media (max-width: $bp-tablet) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__photo {
+    flex-shrink: 0;
+
+    img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--accent);
+    }
+  }
+
+  &__content {
+    h1 {
+      font-size: 2.8rem;
+      margin: 0 0 $spacing-xs;
+
+      @media (max-width: $bp-mobile) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.3rem;
+    color: var(--accent);
+    margin: 0 0 $spacing-md;
+    font-weight: 500;
+  }
+
+  &__text {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 0 $spacing-lg;
+  }
+
+  &__actions {
+    display: flex;
+    gap: $spacing-md;
+
+    @media (max-width: $bp-tablet) {
+      justify-content: center;
+    }
+  }
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  padding: $spacing-sm $spacing-lg;
+  border-radius: $radius-md;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all $transition-fast;
+
+  &--primary {
+    background: var(--accent);
+    color: #fff;
+
+    &:hover {
+      background: var(--accent-hover);
+      color: #fff;
+    }
+  }
+
+  &--secondary {
+    border: 2px solid var(--border);
+    color: var(--text-primary);
+
+    &:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+  }
+}
+
+// Skills
+.skills {
+  background: var(--bg-secondary);
+  padding: $spacing-xl 0;
+
+  &__container {
+    max-width: $bp-wide;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin: 0 0 $spacing-xl;
+    text-align: center;
+  }
+
+  &__categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: $spacing-lg;
+    margin-bottom: $spacing-xl;
+  }
+
+  &__category {
+    h3 {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 0 0 $spacing-sm;
+    }
+  }
+
+  &__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-sm;
+  }
+
+  &__soft {
+    text-align: center;
+
+    h3 {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 0 0 $spacing-sm;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: $spacing-sm $spacing-lg;
+    }
+
+    li {
+      color: var(--text-secondary);
+    }
+  }
+}
+
+// Projects
+.projects {
+  padding: $spacing-xl 0;
+
+  &__container {
+    max-width: $bp-wide;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin: 0 0 $spacing-xl;
+    text-align: center;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: $spacing-lg;
+  }
+}
+
+// Contact
+.contact {
+  background: var(--bg-secondary);
+  padding: $spacing-xl 0;
+
+  &__container {
+    max-width: $bp-wide;
+    margin: 0 auto;
+    padding: 0 $spacing-lg;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin: 0 0 $spacing-xl;
+    text-align: center;
+  }
+
+  &__links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: $spacing-md;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: $spacing-md;
+    border-radius: $radius-md;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all $transition-fast;
+
+    &:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+  }
+
+  &__label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: $spacing-xs;
+  }
+}
