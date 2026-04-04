@@ -15,7 +15,9 @@ export const cvPl: CvData = {
     instagram: 'IceFrosTv3',
   },
   profile:
-    'Frontend Developer z technicznym doświadczeniem i ponad rokiem intensywnej nauki. Skupiony na pisaniu czystego, czytelnego kodu i zrozumieniu architektury rozwiązań. Doświadczenie z rzeczywistymi systemami technicznymi (serwery, węzły blockchain), co wzmocniło myślenie systemowe i poczucie odpowiedzialności. Gotowy do relokacji.',
+    'Frontend Developer z technicznym doświadczeniem i ponad rokiem intensywnej nauki. Skupiony na pisaniu czystego, ' +
+    'czytelnego kodu i zrozumieniu architektury rozwiązań. Doświadczenie z rzeczywistymi systemami technicznymi ' +
+    '(serwery, węzły blockchain), co wzmocniło myślenie systemowe i poczucie odpowiedzialności. Gotowy do relokacji.',
   hardSkills: [
     'HTML5', 'CSS3', 'SCSS/SASS', 'JavaScript (ES6+)', 'TypeScript',
     'Angular 18', 'RxJS', 'Webpack 5', 'Vite', 'Gulp', 'Angular CLI', 'npm',
@@ -39,7 +41,7 @@ export const cvPl: CvData = {
     },
   ],
   education: [
-    { institution: 'ITLogia', specialty: 'Frontend Development', period: '2025 — obecnie' },
+    { institution: 'ITLogia', specialty: 'Frontend Development', period: '2025 — 2026' },
     { institution: 'PGU im. T.G. Szewczenki', specialty: 'Bezpieczeństwo systemów informacyjnych', period: '2014 — 2018' },
   ],
   projects: [

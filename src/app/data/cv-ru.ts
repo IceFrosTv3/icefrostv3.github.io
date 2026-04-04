@@ -1,4 +1,4 @@
-import { CvData } from '../models/cv.interface';
+import {CvData} from '../models/cv.interface';
 
 export const cvRu: CvData = {
   lang: 'ru',
@@ -15,7 +15,9 @@ export const cvRu: CvData = {
     instagram: 'IceFrosTv3',
   },
   profile:
-    'Frontend-разработчик с техническим бэкграундом и более чем годом интенсивного обучения. Фокус на чистый, читаемый код и понимание архитектуры решений. Имею опыт работы с реальными техническими системами (серверы, блокчейн-ноды), что укрепило системное мышление и ответственность. Готов к переезду.',
+    'Frontend-разработчик с техническим бэкграундом и более чем годом интенсивного обучения. Фокус на чистый, ' +
+    'читаемый код и понимание архитектуры решений. Имею опыт работы с реальными техническими системами ' +
+    '(серверы, блокчейн-ноды), что укрепило системное мышление и ответственность. Готов к переезду.',
   hardSkills: [
     'HTML5', 'CSS3', 'SCSS/SASS', 'JavaScript (ES6+)', 'TypeScript',
     'Angular 18', 'RxJS', 'Webpack 5', 'Vite', 'Gulp', 'Angular CLI', 'npm',
@@ -39,8 +41,8 @@ export const cvRu: CvData = {
     },
   ],
   education: [
-    { institution: 'ITLogia', specialty: 'Frontend-разработка', period: '2025 — настоящее время' },
-    { institution: 'ПГУ им. Т. Г. Шевченко', specialty: 'Безопасность информационных систем', period: '2014 — 2018' },
+    {institution: 'ITLogia', specialty: 'Frontend-разработка', period: '2025 — 2026'},
+    {institution: 'ПГУ им. Т. Г. Шевченко', specialty: 'Безопасность информационных систем', period: '2014 — 2018'},
   ],
   projects: [
     {
@@ -84,25 +86,25 @@ export const cvRu: CvData = {
     },
   ],
   languages: [
-    { name: 'Русский', level: 'Родной' },
-    { name: 'Польский', level: 'B2' },
-    { name: 'Английский', level: 'A2 (активное изучение)' },
+    {name: 'Русский', level: 'Родной'},
+    {name: 'Польский', level: 'B2'},
+    {name: 'Английский', level: 'A2 (активное изучение)'},
   ],
   references: [
     {
       name: 'Alexander Chernyavskiy',
       role: 'DOUBLE TOP / Retro Lead',
       contacts: [
-        { type: 'Telegram', value: 'feeeniqs' },
-        { type: 'Instagram', value: 'feeeniqs' },
+        {type: 'Telegram', value: 'feeeniqs'},
+        {type: 'Instagram', value: 'feeeniqs'},
       ],
     },
     {
       name: 'Pavel Kutergin',
       role: 'ITLogia / Mentor',
       contacts: [
-        { type: 'Telegram', value: 'p_kutergin' },
-        { type: 'Instagram', value: 'pavel-kutergin' },
+        {type: 'Telegram', value: 'p_kutergin'},
+        {type: 'Instagram', value: 'pavel-kutergin'},
       ],
     },
   ],

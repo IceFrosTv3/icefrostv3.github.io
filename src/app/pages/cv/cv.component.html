@@ -5,13 +5,16 @@
 
     <div class="cv__contact">
       @for (phone of cv.contact.phones; track phone) {
-        <span>{{ phone }}</span>
+        <a [href]="phone | phoneHref">{{ phone }}</a>
       }
-      <span>{{ cv.contact.email }}</span>
+      <a [href]="'mailto:' + cv.contact.email">{{ cv.contact.email }}</a>
       <span>{{ cv.contact.location }}. {{ cv.contact.relocation }}.</span>
-      <span>GitHub: {{ cv.contact.github }}</span>
-      <span>LinkedIn: {{ cv.contact.linkedin }}</span>
-      <span>Telegram: {{ cv.contact.telegram }}</span>
+      <a [href]="'https://github.com/' + cv.contact.github" target="_blank"
+         rel="noopener">GitHub: {{ cv.contact.github }}</a>
+      <a [href]="'https://linkedin.com/in/' + cv.contact.linkedin" target="_blank"
+         rel="noopener">LinkedIn: {{ cv.contact.linkedin }}</a>
+      <a [href]="'https://t.me/' + cv.contact.telegram" target="_blank"
+         rel="noopener">Telegram: {{ cv.contact.telegram }}</a>
     </div>
   </header>
 
@@ -22,8 +25,10 @@
 
   <section>
     <h2>{{ cv.lang === 'ru' ? 'Навыки' : cv.lang === 'pl' ? 'Umiejętności' : 'Skills' }}</h2>
-    <p><strong>{{ cv.lang === 'ru' ? 'Технические' : cv.lang === 'pl' ? 'Techniczne' : 'Technical' }}:</strong> {{ cv.hardSkills.join(', ') }}</p>
-    <p><strong>{{ cv.lang === 'ru' ? 'Личные' : cv.lang === 'pl' ? 'Miękkie' : 'Soft skills' }}:</strong> {{ cv.softSkills.join(', ') }}</p>
+    <p><strong>{{ cv.lang === 'ru' ? 'Технические' : cv.lang === 'pl' ? 'Techniczne' : 'Technical' }}
+      :</strong> {{ cv.hardSkills.join(', ') }}</p>
+    <p><strong>{{ cv.lang === 'ru' ? 'Личные' : cv.lang === 'pl' ? 'Miękkie' : 'Soft skills' }}
+      :</strong> {{ cv.softSkills.join(', ') }}</p>
   </section>
 
   <section>
@@ -86,7 +91,20 @@
         <h3>{{ ref.name }}</h3>
         <p>{{ ref.role }}</p>
         @for (contact of ref.contacts; track contact.type) {
-          <p>{{ contact.type }}: {{ contact.value }}</p>
+          <p>
+            {{ contact.type }}:
+            @if (contact.type === 'Telegram') {
+              <a [href]="'https://t.me/' + contact.value" target="_blank" rel="noopener">{{ contact.value }}</a>
+            } @else if (contact.type === 'Instagram') {
+              <a [href]="'https://instagram.com/' + contact.value" target="_blank"
+                 rel="noopener">{{ contact.value }}</a>
+            } @else if (contact.type === 'LinkedIn') {
+              <a [href]="'https://linkedin.com/in/' + contact.value" target="_blank"
+                 rel="noopener">{{ contact.value }}</a>
+            } @else {
+              {{ contact.value }}
+            }
+          </p>
         }
       </div>
     }

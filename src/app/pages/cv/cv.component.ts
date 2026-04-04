@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { PhoneHrefPipe } from '../../pipes/phone-href.pipe';
 import { CvData } from '../../models/cv.interface';
 import { cvEn } from '../../data/cv-en';
 import { cvRu } from '../../data/cv-ru';
@@ -14,6 +15,7 @@ const CV_DATA: Record<string, CvData> = {
 @Component({
   selector: 'app-cv',
   standalone: true,
+  imports: [PhoneHrefPipe],
   templateUrl: './cv.component.html',
   styleUrl: './cv.component.scss',
 })

@@ -1,4 +1,5 @@
 @use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 .header {
   position: fixed;
@@ -17,6 +18,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include mobile-s {
+      padding: $spacing-md;
+    }
   }
 
   &__logo {
@@ -57,7 +62,7 @@
     &.active span:nth-child(2) { opacity: 0; }
     &.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-    @media (max-width: $bp-tablet) {
+    @include mobile {
       display: flex;
     }
   }
@@ -67,7 +72,7 @@
     align-items: center;
     gap: $spacing-lg;
 
-    @media (max-width: $bp-tablet) {
+    @include mobile {
       display: none;
       position: absolute;
       top: 100%;
@@ -91,7 +96,7 @@
     font-size: 0.9rem;
     transition: color $transition-fast;
 
-    &:hover {
+    @include hover {
       color: var(--text-primary);
     }
   }
@@ -117,7 +122,12 @@
     text-decoration: none;
     transition: all $transition-fast;
 
-    &:hover, &.active {
+    @include hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    &.active {
       background: var(--accent);
       color: #fff;
     }
@@ -128,7 +138,7 @@
     transition: color $transition-fast;
     display: flex;
 
-    &:hover {
+    @include hover {
       color: var(--text-primary);
     }
   }

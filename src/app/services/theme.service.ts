@@ -1,8 +1,8 @@
-import { Injectable, signal } from '@angular/core';
+import {Injectable, signal} from '@angular/core';
 
 export type Theme = 'light' | 'dark';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({providedIn: 'root'})
 export class ThemeService {
   theme = signal<Theme>(this.getStoredTheme());
 

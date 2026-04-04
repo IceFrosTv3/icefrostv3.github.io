@@ -15,7 +15,10 @@ export const cvEn: CvData = {
     instagram: 'IceFrosTv3',
   },
   profile:
-    'Frontend Developer with a technical background and over a year of intensive training. Focused on writing clean, readable code and understanding solution architecture. Experienced with real technical systems (servers, blockchain nodes), which strengthened systems thinking and sense of responsibility. Open to relocation.',
+    'Frontend Developer with a technical background and over a year of intensive training. ' +
+    'Focused on writing clean, readable code and understanding solution architecture. Experienced with real ' +
+    'technical systems (servers, blockchain nodes), which strengthened systems thinking and sense of responsibility. ' +
+    'Open to relocation.',
   hardSkills: [
     'HTML5', 'CSS3', 'SCSS/SASS', 'JavaScript (ES6+)', 'TypeScript',
     'Angular 18', 'RxJS', 'Webpack 5', 'Vite', 'Gulp', 'Angular CLI', 'npm',
@@ -39,7 +42,7 @@ export const cvEn: CvData = {
     },
   ],
   education: [
-    { institution: 'ITLogia', specialty: 'Frontend Development', period: '2025 — Present' },
+    { institution: 'ITLogia', specialty: 'Frontend Development', period: '2025 — 2026' },
     { institution: 'PGU im. T.G. Shevchenko', specialty: 'Information Systems Security', period: '2014 — 2018' },
   ],
   projects: [

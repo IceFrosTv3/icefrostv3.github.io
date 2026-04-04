@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { ThemeService } from './services/theme.service';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
+import {Component, OnInit} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+import {ThemeService} from './services/theme.service';
+import {HeaderComponent} from './components/header/header.component';
+import {FooterComponent} from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,8 @@ import { FooterComponent } from './components/footer/footer.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
-  constructor(private themeService: ThemeService) {}
+  constructor(private themeService: ThemeService) {
+  }
 
   ngOnInit(): void {
     this.themeService.initTheme();

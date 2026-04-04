@@ -1,0 +1,55 @@
+@use 'sass:math';
+
+// Breakpoint mixins
+@mixin desktop {
+  @media (max-width: 1280.98px) { @content; }
+}
+
+@mixin tablet {
+  @media (max-width: 1023.98px) { @content; }
+}
+
+@mixin mobile {
+  @media (max-width: 767.98px) { @content; }
+}
+
+@mixin mobile-s {
+  @media (max-width: 480.98px) { @content; }
+}
+
+// Fluid typography: scales between min and max based on viewport
+@mixin fluid-text($max, $min) {
+  font-size: clamp(#{$min}px, #{math.div($max, 1440) * 100}vw, #{$max}px);
+}
+
+// Flex center shorthand
+@mixin flex-center($inline: false) {
+  @if $inline {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+  justify-content: center;
+  align-items: center;
+}
+
+// Responsive hover (pointer devices only)
+@mixin hover {
+  @media (hover: hover) {
+    &:hover { @content; }
+  }
+
+  @media (hover: none) {
+    &:active { @content; }
+  }
+}
+
+// Visually hidden (screen readers only)
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}

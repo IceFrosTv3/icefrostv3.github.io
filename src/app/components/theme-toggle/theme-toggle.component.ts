@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { ThemeService } from '../../services/theme.service';
+import {Component} from '@angular/core';
+import {ThemeService} from '../../services/theme.service';
 
 @Component({
   selector: 'app-theme-toggle',
@@ -8,5 +8,6 @@ import { ThemeService } from '../../services/theme.service';
   styleUrl: './theme-toggle.component.scss'
 })
 export class ThemeToggleComponent {
-  constructor(protected themeService: ThemeService) {}
+  constructor(protected themeService: ThemeService) {
+  }
 }

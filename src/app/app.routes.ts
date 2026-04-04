@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import {Routes} from '@angular/router';
 
 export const routes: Routes = [
   {
@@ -8,17 +8,17 @@ export const routes: Routes = [
   {
     path: 'cv/en',
     loadComponent: () => import('./pages/cv/cv.component').then(m => m.CvComponent),
-    data: { lang: 'en' }
+    data: {lang: 'en'}
   },
   {
     path: 'cv/ru',
     loadComponent: () => import('./pages/cv/cv.component').then(m => m.CvComponent),
-    data: { lang: 'ru' }
+    data: {lang: 'ru'}
   },
   {
     path: 'cv/pl',
     loadComponent: () => import('./pages/cv/cv.component').then(m => m.CvComponent),
-    data: { lang: 'pl' }
+    data: {lang: 'pl'}
   },
   {
     path: '**',
