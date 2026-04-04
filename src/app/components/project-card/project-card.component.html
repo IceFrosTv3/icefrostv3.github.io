@@ -1,0 +1,29 @@
+<article class="card">
+  @if (project.screenshot) {
+    <div class="card__image">
+      <img [src]="project.screenshot" [alt]="project.name + ' screenshot'" loading="lazy" />
+    </div>
+  }
+
+  <div class="card__body">
+    <h3 class="card__title">{{ project.name }}</h3>
+    <p class="card__description">{{ project.description }}</p>
+
+    <div class="card__tech">
+      @for (t of project.tech; track t) {
+        <span class="card__tag">{{ t }}</span>
+      }
+    </div>
+
+    <div class="card__actions">
+      @if (project.demo) {
+        <a [href]="project.demo" target="_blank" rel="noopener" class="card__btn card__btn--primary">
+          Live Demo
+        </a>
+      }
+      <a [href]="project.github" target="_blank" rel="noopener" class="card__btn card__btn--secondary">
+        Source Code
+      </a>
+    </div>
+  </div>
+</article>
