@@ -1,0 +1,94 @@
+<article class="cv">
+  <header class="cv__header">
+    <h1>{{ cv.name }}</h1>
+    <p class="cv__title">{{ cv.title }}</p>
+
+    <div class="cv__contact">
+      @for (phone of cv.contact.phones; track phone) {
+        <span>{{ phone }}</span>
+      }
+      <span>{{ cv.contact.email }}</span>
+      <span>{{ cv.contact.location }}. {{ cv.contact.relocation }}.</span>
+      <span>GitHub: {{ cv.contact.github }}</span>
+      <span>LinkedIn: {{ cv.contact.linkedin }}</span>
+      <span>Telegram: {{ cv.contact.telegram }}</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>{{ cv.lang === 'ru' ? 'Профиль' : cv.lang === 'pl' ? 'Profil' : 'Profile' }}</h2>
+    <p>{{ cv.profile }}</p>
+  </section>
+
+  <section>
+    <h2>{{ cv.lang === 'ru' ? 'Навыки' : cv.lang === 'pl' ? 'Umiejętności' : 'Skills' }}</h2>
+    <p><strong>{{ cv.lang === 'ru' ? 'Технические' : cv.lang === 'pl' ? 'Techniczne' : 'Technical' }}:</strong> {{ cv.hardSkills.join(', ') }}</p>
+    <p><strong>{{ cv.lang === 'ru' ? 'Личные' : cv.lang === 'pl' ? 'Miękkie' : 'Soft skills' }}:</strong> {{ cv.softSkills.join(', ') }}</p>
+  </section>
+
+  <section>
+    <h2>{{ cv.lang === 'ru' ? 'Опыт работы' : cv.lang === 'pl' ? 'Doświadczenie zawodowe' : 'Work Experience' }}</h2>
+    @for (job of cv.experience; track job.company) {
+      <div class="cv__job">
+        <div class="cv__job-header">
+          <h3>{{ job.company }}</h3>
+          <span class="cv__period">{{ job.period }}</span>
+        </div>
+        <p class="cv__role">{{ job.role }}</p>
+        <ul>
+          @for (bullet of job.bullets; track bullet) {
+            <li>{{ bullet }}</li>
+          }
+        </ul>
+      </div>
+    }
+  </section>
+
+  <section>
+    <h2>{{ cv.lang === 'ru' ? 'Образование' : cv.lang === 'pl' ? 'Wykształcenie' : 'Education' }}</h2>
+    @for (edu of cv.education; track edu.institution) {
+      <div class="cv__edu">
+        <div class="cv__edu-header">
+          <h3>{{ edu.institution }}</h3>
+          <span class="cv__period">{{ edu.period }}</span>
+        </div>
+        <p>{{ edu.specialty }}</p>
+      </div>
+    }
+  </section>
+
+  <section>
+    <h2>{{ cv.lang === 'ru' ? 'Проекты' : cv.lang === 'pl' ? 'Projekty' : 'Projects' }}</h2>
+    @for (project of cv.projects; track project.name) {
+      <div class="cv__project">
+        <h3>
+          <a [href]="project.demo ?? project.github" target="_blank" rel="noopener">{{ project.name }}</a>
+        </h3>
+        <p>{{ project.description }}</p>
+        <p class="cv__tech">{{ project.tech.join(' · ') }}</p>
+      </div>
+    }
+  </section>
+
+  <section>
+    <h2>{{ cv.lang === 'ru' ? 'Языки' : cv.lang === 'pl' ? 'Języki' : 'Languages' }}</h2>
+    <ul>
+      @for (lang of cv.languages; track lang.name) {
+        <li>{{ lang.name }} — {{ lang.level }}</li>
+      }
+    </ul>
+  </section>
+
+  <section>
+    <h2>{{ cv.lang === 'ru' ? 'Рекомендации' : cv.lang === 'pl' ? 'Referencje' : 'References' }}</h2>
+    @for (ref of cv.references; track ref.name) {
+      <div class="cv__ref">
+        <h3>{{ ref.name }}</h3>
+        <p>{{ ref.role }}</p>
+        @for (contact of ref.contacts; track contact.type) {
+          <p>{{ contact.type }}: {{ contact.value }}</p>
+        }
+      </div>
+    }
+  </section>
+</article>

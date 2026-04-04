@@ -1,0 +1,110 @@
+@use '../../../styles/variables' as *;
+
+.cv {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $spacing-xl $spacing-lg;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+
+  &__header {
+    margin-bottom: $spacing-xl;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: $spacing-lg;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin: 0 0 $spacing-xs;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin: 0 0 $spacing-md;
+  }
+
+  &__contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-sm $spacing-lg;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+
+  section {
+    margin-bottom: $spacing-lg;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: $spacing-xs;
+    margin: 0 0 $spacing-md;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  &__job, &__edu, &__project, &__ref {
+    margin-bottom: $spacing-md;
+  }
+
+  &__job-header, &__edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+  &__period {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  &__role {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: $spacing-xs 0;
+  }
+
+  &__tech {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  ul {
+    padding-left: $spacing-lg;
+    margin: $spacing-xs 0;
+  }
+
+  li {
+    margin-bottom: $spacing-xs;
+    font-size: 0.9rem;
+  }
+
+  p {
+    margin: $spacing-xs 0;
+    font-size: 0.9rem;
+  }
+
+  @media print {
+    max-width: 100%;
+    padding: 0;
+
+    h1 { font-size: 18pt; }
+    h2 { font-size: 13pt; color: #000; border-color: #000; }
+    h3 { font-size: 11pt; }
+
+    &__contact {
+      gap: 4mm 8mm;
+    }
+
+    section { margin-bottom: 4mm; }
+    &__job, &__edu, &__project, &__ref { margin-bottom: 3mm; }
+  }
+}
