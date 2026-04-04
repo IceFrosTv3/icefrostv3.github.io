@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ElementRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SkillBadgeComponent } from '../../components/skill-badge/skill-badge.component';
 import { ProjectCardComponent } from '../../components/project-card/project-card.component';
@@ -11,7 +11,7 @@ import { ProjectData } from '../../models/project.interface';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
   hardSkills: Record<string, string[]> = {
     'Core': ['HTML5', 'CSS3', 'SCSS/SASS', 'JavaScript (ES6+)', 'TypeScript'],
     'Frameworks': ['Angular 18', 'RxJS', 'Angular Signals'],
@@ -69,4 +69,23 @@ export class HomeComponent {
   ];
 
   skillCategories = Object.entries(this.hardSkills);
+
+  constructor(private el: ElementRef) {}
+
+  ngAfterViewInit(): void {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    this.el.nativeElement
+      .querySelectorAll('.animate-on-scroll')
+      .forEach((el: Element) => observer.observe(el));
+  }
 }
