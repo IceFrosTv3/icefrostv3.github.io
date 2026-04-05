@@ -24,6 +24,12 @@
     margin: 0 0 $spacing-md;
   }
 
+  &__location {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0 0 $spacing-sm;
+  }
+
   &__contact {
     display: flex;
     flex-wrap: wrap;
@@ -95,8 +101,6 @@
   @media print {
     max-width: 100%;
     padding: 0;
-    color: #000 !important;
-    background: #fff !important;
 
     &__header {
       border-bottom: none;
@@ -104,22 +108,26 @@
       margin-bottom: 4mm;
     }
 
-    h1 { font-size: 18pt; }
-    h2 { font-size: 13pt; color: #000 !important; border-color: #000; }
-    h3 { font-size: 11pt; }
-
-    &__title,
-    &__contact,
-    &__role { color: #333 !important; }
-
-    &__period,
-    &__tech { color: #555 !important; }
+    h1 {
+      font-size: 18pt;
+    }
+    h2 {
+      font-size: 13pt;
+      color: var(--text-primary);
+    }
+    h3 {
+      font-size: 11pt;
+    }
 
     &__contact {
       gap: 2mm 8mm;
     }
 
-    section { margin-bottom: 4mm; }
-    &__job, &__edu, &__project, &__ref { margin-bottom: 3mm; }
+    section {
+      margin-bottom: 4mm;
+    }
+    &__job, &__edu, &__project, &__ref {
+      margin-bottom: 3mm;
+    }
   }
 }

@@ -4,11 +4,20 @@
     margin: 15mm;
   }
 
+  :root {
+    --bg-primary: #fff !important;
+    --bg-secondary: #fff !important;
+    --bg-surface: #fff !important;
+    --text-primary: #000 !important;
+    --text-secondary: #333 !important;
+    --text-muted: #555 !important;
+    --accent: #1a4fc2 !important;
+    --border: #000 !important;
+  }
+
   body {
     font-size: 11pt;
     line-height: 1.4;
-    color: #000 !important;
-    background: #fff !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -18,14 +27,5 @@
   .theme-toggle,
   .no-print {
     display: none !important;
-  }
-
-  a {
-    color: #000 !important;
-    text-decoration: none !important;
-  }
-
-  a[href]::after {
-    content: none !important;
   }
 }

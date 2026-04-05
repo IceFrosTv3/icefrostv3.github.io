@@ -3,12 +3,13 @@
     <h1>{{ cv.name }}</h1>
     <p class="cv__title">{{ cv.title }}</p>
 
+    <p class="cv__location">{{ cv.contact.location }}. {{ cv.contact.relocation }}.</p>
+
     <div class="cv__contact">
       @for (phone of cv.contact.phones; track phone) {
         <a [href]="phone | phoneHref">{{ phone }}</a>
       }
       <a [href]="'mailto:' + cv.contact.email">{{ cv.contact.email }}</a>
-      <span>{{ cv.contact.location }}. {{ cv.contact.relocation }}.</span>
       <a [href]="'https://github.com/' + cv.contact.github" target="_blank"
          rel="noopener">GitHub: {{ cv.contact.github }}</a>
       <a [href]="'https://linkedin.com/in/' + cv.contact.linkedin" target="_blank"
