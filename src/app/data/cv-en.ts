@@ -88,7 +88,7 @@ export const cvEn: CvData = {
   ],
   languages: [
     { name: 'Russian', level: 'Native' },
-    { name: 'Polish', level: 'B2' },
+    { name: 'Polish', level: 'B1' },
     { name: 'English', level: 'A2 (active learning)' },
   ],
   references: [

@@ -1,15 +1,15 @@
 :root,
 [data-theme='light'] {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f5f7fa;
-  --bg-surface: #ffffff;
-  --text-primary: #1a1a2e;
-  --text-secondary: #4a4a6a;
-  --text-muted: #8888a0;
+  --bg-primary: #f8f9fb;
+  --bg-secondary: #eef1f6;
+  --bg-surface: #f0f2f7;
+  --text-primary: #2d3748;
+  --text-secondary: #5a6578;
+  --text-muted: #8893a4;
   --accent: #2563eb;
   --accent-hover: #1d4ed8;
-  --border: #e2e8f0;
-  --shadow: rgba(0, 0, 0, 0.08);
+  --border: #d8dfe8;
+  --shadow: rgba(0, 0, 0, 0.06);
 }
 
 [data-theme='dark'] {

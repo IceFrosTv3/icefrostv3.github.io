@@ -2,13 +2,14 @@
 @use '../../../styles/mixins' as *;
 
 .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   border-radius: $radius-lg;
   border: 1px solid var(--border);
   background: var(--bg-surface);
   overflow: hidden;
   transition: all $transition-normal;
-  display: flex;
-  flex-direction: column;
 
   @include hover {
     box-shadow: 0 8px 30px var(--shadow);
@@ -38,6 +39,7 @@
     padding: $spacing-lg;
     display: flex;
     flex-direction: column;
+    gap: $spacing-md;
     flex: 1;
 
     @include mobile-s {
@@ -47,35 +49,41 @@
 
   &__title {
     font-size: 1.15rem;
-    margin: 0 0 $spacing-sm;
     color: var(--text-primary);
   }
 
   &__description {
     font-size: 0.9rem;
     color: var(--text-secondary);
-    margin: 0 0 $spacing-md;
     flex: 1;
   }
 
   &__tech {
     display: flex;
     flex-wrap: wrap;
-    gap: $spacing-xs;
-    margin-bottom: $spacing-md;
+    gap: $spacing-sm;
   }
 
   &__tag {
     font-size: 0.75rem;
-    padding: 0.2rem 0.5rem;
-    border-radius: $radius-sm;
-    background: var(--bg-secondary);
     color: var(--text-muted);
   }
 
   &__actions {
     display: flex;
-    gap: $spacing-sm;
+    gap: $spacing-md;
+
+    @include desktop {
+      gap: $spacing-sm;
+    }
+
+    @include tablet {
+      gap: $spacing-md;
+    }
+
+    @include mobile-s {
+      flex-direction: column;
+    }
   }
 
   &__btn {
@@ -84,8 +92,13 @@
     font-size: 0.85rem;
     font-weight: 600;
     text-decoration: none;
-    text-align: center;
+    justify-content: center;
     transition: all $transition-fast;
+
+    @include mobile {
+      padding: $spacing-md;
+      font-size: 1rem;
+    }
 
     &--primary {
       background: var(--accent);

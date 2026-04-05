@@ -95,13 +95,20 @@
   @media print {
     max-width: 100%;
     padding: 0;
+    background: #fff !important;
+
+    &__header {
+      border-bottom: none;
+      padding-bottom: 2mm;
+      margin-bottom: 4mm;
+    }
 
     h1 { font-size: 18pt; }
     h2 { font-size: 13pt; color: #000; border-color: #000; }
     h3 { font-size: 11pt; }
 
     &__contact {
-      gap: 4mm 8mm;
+      gap: 2mm 8mm;
     }
 
     section { margin-bottom: 4mm; }

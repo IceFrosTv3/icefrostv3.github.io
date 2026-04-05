@@ -87,7 +87,7 @@ export const cvRu: CvData = {
   ],
   languages: [
     {name: 'Русский', level: 'Родной'},
-    {name: 'Польский', level: 'B2'},
+    {name: 'Польский', level: 'B1'},
     {name: 'Английский', level: 'A2 (активное изучение)'},
   ],
   references: [
