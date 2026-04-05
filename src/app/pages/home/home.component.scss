@@ -63,6 +63,10 @@
     display: flex;
     gap: $spacing-md;
 
+    @include tablet {
+      justify-content: center;
+    }
+
     @include mobile-s {
       flex-direction: column;
     }
@@ -167,8 +171,6 @@
     }
 
     ul {
-      list-style: none;
-      padding: 0;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -255,7 +257,7 @@
     margin: 0 auto;
   }
 
-  @media (max-width: 785px) {
+  @include mobile {
     &__item--email {
       grid-column: 1 / -1;
     }
@@ -267,7 +269,7 @@
     display: contents;
   }
 
-  @media (max-width: 785px) {
+  @include mobile {
     &__rest {
       display: flex;
       flex-direction: column;

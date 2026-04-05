@@ -1,17 +1,19 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
 .theme-toggle {
   background: none;
   border: 2px solid var(--border);
-  border-radius: 50%;
+  border-radius: $radius-full;
   width: 40px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   color: var(--text-primary);
-  transition: all 0.3s ease;
+  transition: all $transition-normal;
 
-  &:hover {
+  @include hover {
     border-color: var(--accent);
     color: var(--accent);
   }

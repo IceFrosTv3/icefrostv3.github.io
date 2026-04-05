@@ -95,6 +95,7 @@
   @media print {
     max-width: 100%;
     padding: 0;
+    color: #000 !important;
     background: #fff !important;
 
     &__header {
@@ -104,8 +105,15 @@
     }
 
     h1 { font-size: 18pt; }
-    h2 { font-size: 13pt; color: #000; border-color: #000; }
+    h2 { font-size: 13pt; color: #000 !important; border-color: #000; }
     h3 { font-size: 11pt; }
+
+    &__title,
+    &__contact,
+    &__role { color: #333 !important; }
+
+    &__period,
+    &__tech { color: #555 !important; }
 
     &__contact {
       gap: 2mm 8mm;

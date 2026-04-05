@@ -1,5 +1,6 @@
+@use '../../../styles/mixins' as *;
+
 .skill-badge {
-  display: inline-block;
   padding: 0.35rem 0.85rem;
   font-size: 0.85rem;
   font-weight: 500;
@@ -9,7 +10,7 @@
   border: 1px solid var(--border);
   transition: all 0.2s ease;
 
-  &:hover {
+  @include hover {
     border-color: var(--accent);
     color: var(--accent);
   }

@@ -17,6 +17,7 @@
   @media (max-width: 480.98px) { @content; }
 }
 
+
 // Fluid typography: scales between min and max based on viewport
 @mixin fluid-text($max, $min) {
   font-size: clamp(#{$min}px, #{math.div($max, 1440) * 100}vw, #{$max}px);
