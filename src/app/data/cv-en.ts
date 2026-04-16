@@ -72,6 +72,13 @@ export const cvEn: CvData = {
       github: 'https://github.com/IceFrosTv3/Freelance-Studio',
     },
     {
+      name: 'Future Tech',
+      description: 'Multi-page responsive website for a technology news and media platform. Features ~40 BEM components, custom select, tabs, video player, and input mask.',
+      tech: ['HTML5', 'SCSS', 'BEM', 'JavaScript'],
+      github: 'https://github.com/IceFrosTv3/future-tech',
+      demo: 'https://icefrostv3.github.io/future-tech/',
+    },
+    {
       name: 'Positivus',
       description: 'Responsive commercial landing page with modern UI, clean code structure, and pixel-perfect design.',
       tech: ['HTML5', 'SCSS', 'BEM'],

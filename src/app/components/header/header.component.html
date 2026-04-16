@@ -6,7 +6,9 @@
     </a>
 
     <button class="header__burger" (click)="toggleMenu()" [class.active]="menuOpen" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
+      <span class="header__burger--line"></span>
+      <span class="header__burger--line"></span>
+      <span class="header__burger--line"></span>
     </button>
 
     <nav class="header__nav" [class.open]="menuOpen">

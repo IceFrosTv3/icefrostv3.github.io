@@ -71,6 +71,13 @@ export const cvPl: CvData = {
       github: 'https://github.com/IceFrosTv3/Freelance-Studio',
     },
     {
+      name: 'Future Tech',
+      description: 'Wielostronicowa responsywna witryna dla platformy technologicznych newsów. Około 40 komponentów BEM: select, zakładki, odtwarzacz wideo, maska wejścia.',
+      tech: ['HTML5', 'SCSS', 'BEM', 'JavaScript'],
+      github: 'https://github.com/IceFrosTv3/future-tech',
+      demo: 'https://icefrostv3.github.io/future-tech/',
+    },
+    {
       name: 'Positivus',
       description: 'Responsywna komercyjna strona docelowa z nowoczesnym UI, czystą strukturą kodu i pixel-perfect designem.',
       tech: ['HTML5', 'SCSS', 'BEM'],

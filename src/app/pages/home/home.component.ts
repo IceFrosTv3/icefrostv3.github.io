@@ -35,6 +35,13 @@ export class HomeComponent implements AfterViewInit {
       demo: 'https://icefrostv3.github.io/tik-talk/',
     },
     {
+      name: 'Future Tech',
+      description: 'Multi-page responsive website for a tech news and media platform with custom components and adaptive sizing.',
+      tech: ['HTML5', 'SCSS', 'BEM', 'JavaScript'],
+      github: 'https://github.com/IceFrosTv3/future-tech',
+      demo: 'https://icefrostv3.github.io/future-tech/',
+    },
+    {
       name: 'Positivus',
       description: 'Responsive commercial landing page with modern UI and pixel-perfect design.',
       tech: ['HTML5', 'SCSS', 'BEM'],

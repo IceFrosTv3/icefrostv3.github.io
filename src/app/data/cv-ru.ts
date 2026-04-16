@@ -71,6 +71,13 @@ export const cvRu: CvData = {
       github: 'https://github.com/IceFrosTv3/Freelance-Studio',
     },
     {
+      name: 'Future Tech',
+      description: 'Многостраничный адаптивный сайт для платформы технологических новостей. Около 40 BEM-компонентов: кастомный select, табы, видеоплеер, маска ввода.',
+      tech: ['HTML5', 'SCSS', 'BEM', 'JavaScript'],
+      github: 'https://github.com/IceFrosTv3/future-tech',
+      demo: 'https://icefrostv3.github.io/future-tech/',
+    },
+    {
       name: 'Positivus',
       description: 'Адаптивная коммерческая посадочная страница с современным UI, чистой структурой кода и pixel-perfect дизайном.',
       tech: ['HTML5', 'SCSS', 'BEM'],
