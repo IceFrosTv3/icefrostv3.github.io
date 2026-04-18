@@ -37,7 +37,7 @@ export class HomeComponent implements AfterViewInit {
     {
       name: 'Stream Vibe',
       description: 'Responsive streaming platform UI with component architecture, fluid typography, and interactive JS modules: tabs, sliders, video players.',
-      tech: ['JavaScript', 'SCSS', 'BEM', 'Vite'],
+      tech: ['JavaScript', 'JSX', 'SCSS', 'BEM', 'Vite', 'Minista'],
       github: 'https://github.com/IceFrosTv3/stream-vibe',
       demo: 'https://icefrostv3.github.io/stream-vibe/',
     },

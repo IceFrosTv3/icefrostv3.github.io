@@ -73,7 +73,7 @@ export const cvRu: CvData = {
     {
       name: 'Stream Vibe',
       description: 'Адаптивный UI стриминговой платформы с компонентной архитектурой, fluid-типографикой через clamp() и JS-модулями: табы, слайдеры, видеоплеер, маска ввода.',
-      tech: ['JavaScript', 'SCSS', 'BEM', 'Vite'],
+      tech: ['JavaScript', 'JSX', 'SCSS', 'BEM', 'Vite', 'Minista'],
       github: 'https://github.com/IceFrosTv3/stream-vibe',
       demo: 'https://icefrostv3.github.io/stream-vibe/',
     },
