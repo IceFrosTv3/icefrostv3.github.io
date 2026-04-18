@@ -71,6 +71,13 @@ export const cvRu: CvData = {
       github: 'https://github.com/IceFrosTv3/Freelance-Studio',
     },
     {
+      name: 'Stream Vibe',
+      description: 'Адаптивный UI стриминговой платформы с компонентной архитектурой, fluid-типографикой через clamp() и JS-модулями: табы, слайдеры, видеоплеер, маска ввода.',
+      tech: ['JavaScript', 'SCSS', 'BEM', 'Vite'],
+      github: 'https://github.com/IceFrosTv3/stream-vibe',
+      demo: 'https://icefrostv3.github.io/stream-vibe/',
+    },
+    {
       name: 'Future Tech',
       description: 'Многостраничный адаптивный сайт для платформы технологических новостей. Около 40 BEM-компонентов: кастомный select, табы, видеоплеер, маска ввода.',
       tech: ['HTML5', 'SCSS', 'BEM', 'JavaScript'],

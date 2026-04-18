@@ -35,6 +35,13 @@ export class HomeComponent implements AfterViewInit {
       demo: 'https://icefrostv3.github.io/tik-talk/',
     },
     {
+      name: 'Stream Vibe',
+      description: 'Responsive streaming platform UI with component architecture, fluid typography, and interactive JS modules: tabs, sliders, video players.',
+      tech: ['JavaScript', 'SCSS', 'BEM', 'Vite'],
+      github: 'https://github.com/IceFrosTv3/stream-vibe',
+      demo: 'https://icefrostv3.github.io/stream-vibe/',
+    },
+    {
       name: 'Future Tech',
       description: 'Multi-page responsive website for a tech news and media platform with custom components and adaptive sizing.',
       tech: ['HTML5', 'SCSS', 'BEM', 'JavaScript'],

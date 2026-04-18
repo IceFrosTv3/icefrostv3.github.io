@@ -72,6 +72,13 @@ export const cvEn: CvData = {
       github: 'https://github.com/IceFrosTv3/Freelance-Studio',
     },
     {
+      name: 'Stream Vibe',
+      description: 'Responsive streaming platform UI with component architecture, fluid typography via clamp(), and interactive JS modules: tabs, sliders, video players, input masking.',
+      tech: ['JavaScript', 'SCSS', 'BEM', 'Vite'],
+      github: 'https://github.com/IceFrosTv3/stream-vibe',
+      demo: 'https://icefrostv3.github.io/stream-vibe/',
+    },
+    {
       name: 'Future Tech',
       description: 'Multi-page responsive website for a technology news and media platform. Features ~40 BEM components, custom select, tabs, video player, and input mask.',
       tech: ['HTML5', 'SCSS', 'BEM', 'JavaScript'],
