@@ -96,26 +96,34 @@
     margin-right: $spacing-xs;
   }
 
-  // External link with arrow
+  // External link styled as accent chip
   &__external-link {
-    color: var(--text-primary);
+    display: inline-flex;
+    align-items: center;
+    color: var(--accent);
     text-decoration: none;
-    transition: color $transition-fast;
+    border: 1px solid var(--accent);
+    border-radius: $radius-sm;
+    padding: 1px 6px;
+    font-weight: 600;
+    transition: all $transition-fast;
 
     &::after {
-      content: '\00a0\2197';
+      content: '\2197';
       font-size: 0.75em;
+      margin-left: 3px;
       vertical-align: super;
-      opacity: 0.5;
-      transition: opacity $transition-fast;
     }
 
     @include hover {
-      color: var(--accent);
+      background: var(--accent);
+      color: #fff;
+    }
+  }
 
-      &::after {
-        opacity: 1;
-      }
+  &__project {
+    h3 {
+      margin-bottom: $spacing-sm;
     }
   }
 
@@ -167,8 +175,15 @@
       margin-bottom: 3mm;
     }
 
-    &__external-link::after {
-      content: none;
+    &__external-link {
+      border: none;
+      padding: 0;
+      font-weight: inherit;
+      color: var(--accent);
+
+      &::after {
+        content: none;
+      }
     }
   }
 }

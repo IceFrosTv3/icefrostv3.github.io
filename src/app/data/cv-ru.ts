@@ -5,7 +5,7 @@ export const cvRu: CvData = {
   name: 'Andrei Sergheev',
   title: 'Frontend разработчик',
   contact: {
-    phones: ['+373-775-522-44', '+48 736 100 736'],
+    phones: ['+373 775 522 44', '+48 736 100 736'],
     email: 'chaos95kill@gmail.com',
     location: 'Варшава, Польша',
     relocation: 'Открыт к удалённой работе или релокации',

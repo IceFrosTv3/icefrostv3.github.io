@@ -5,7 +5,7 @@ export const cvEn: CvData = {
   name: 'Andrei Sergheev',
   title: 'Frontend Developer',
   contact: {
-    phones: ['+373-775-522-44', '+48 736 100 736'],
+    phones: ['+373 775 522 44', '+48 736 100 736'],
     email: 'chaos95kill@gmail.com',
     location: 'Warsaw, Poland',
     relocation: 'Open to remote or relocation',
