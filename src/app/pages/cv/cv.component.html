@@ -21,15 +21,19 @@
 
   <section>
     <h2>{{ cv.lang === 'ru' ? 'Профиль' : cv.lang === 'pl' ? 'Profil' : 'Profile' }}</h2>
-    <p>{{ cv.profile }}</p>
+    @for (line of cv.profile.split('\n\n'); track $index) {
+      <p>{{ line }}</p>
+    }
   </section>
 
   <section>
     <h2>{{ cv.lang === 'ru' ? 'Навыки' : cv.lang === 'pl' ? 'Umiejętności' : 'Skills' }}</h2>
-    <p><strong>{{ cv.lang === 'ru' ? 'Технические' : cv.lang === 'pl' ? 'Techniczne' : 'Technical' }}
-      :</strong> {{ cv.hardSkills.join(', ') }}</p>
-    <p><strong>{{ cv.lang === 'ru' ? 'Личные' : cv.lang === 'pl' ? 'Miękkie' : 'Soft skills' }}
-      :</strong> {{ cv.softSkills.join(', ') }}</p>
+    @for (group of cv.hardSkills; track group.category) {
+      <p class="cv__skill-group">
+        <strong class="cv__skill-category">{{ group.category }}:</strong>
+        {{ group.skills.join(', ') }}
+      </p>
+    }
   </section>
 
   <section>
@@ -68,7 +72,8 @@
     @for (project of cv.projects; track project.name) {
       <div class="cv__project">
         <h3>
-          <a [href]="project.demo ?? project.github" target="_blank" rel="noopener">{{ project.name }}</a>
+          <a [href]="project.demo ?? project.github" target="_blank" rel="noopener"
+             class="cv__external-link">{{ project.name }}</a>
         </h3>
         <p>{{ project.description }}</p>
         <p class="cv__tech">{{ project.tech.join(' · ') }}</p>
@@ -96,9 +101,6 @@
             {{ contact.type }}:
             @if (contact.type === 'Telegram') {
               <a [href]="'https://t.me/' + contact.value" target="_blank" rel="noopener">{{ contact.value }}</a>
-            } @else if (contact.type === 'Instagram') {
-              <a [href]="'https://instagram.com/' + contact.value" target="_blank"
-                 rel="noopener">{{ contact.value }}</a>
             } @else if (contact.type === 'LinkedIn') {
               <a [href]="'https://linkedin.com/in/' + contact.value" target="_blank"
                  rel="noopener">{{ contact.value }}</a>

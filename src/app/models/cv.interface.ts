@@ -10,11 +10,9 @@ export interface CvData {
     github: string;
     telegram: string;
     linkedin: string;
-    instagram?: string;
   };
   profile: string;
-  hardSkills: string[];
-  softSkills: string[];
+  hardSkills: { category: string; skills: string[] }[];
   experience: {
     company: string;
     role: string;

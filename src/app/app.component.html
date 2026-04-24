@@ -1,5 +1,9 @@
-<app-header />
-<main>
+@if (isCvRoute()) {
+  <app-cv-header />
+} @else {
+  <app-header />
+}
+<main [class.cv-layout]="isCvRoute()">
   <router-outlet />
 </main>
 <app-footer />

@@ -1,4 +1,4 @@
-import {CvData} from '../models/cv.interface';
+import { CvData } from '../models/cv.interface';
 
 export const cvRu: CvData = {
   lang: 'ru',
@@ -8,72 +8,70 @@ export const cvRu: CvData = {
     phones: ['+373-775-522-44', '+48 736 100 736'],
     email: 'chaos95kill@gmail.com',
     location: 'Варшава, Польша',
-    relocation: 'Готов к переезду',
+    relocation: 'Открыт к удалённой работе или релокации',
     github: 'IceFrosTv3',
     telegram: 'IceFrosTv3',
     linkedin: 'IceFrosTv3',
-    instagram: 'IceFrosTv3',
   },
   profile:
-    'Frontend-разработчик с техническим бэкграундом и более чем годом интенсивного обучения. Фокус на чистый, ' +
-    'читаемый код и понимание архитектуры решений. Имею опыт работы с реальными техническими системами ' +
-    '(серверы, блокчейн-ноды), что укрепило системное мышление и ответственность. Готов к переезду.',
+    'Frontend-разработчик с фокусом на Angular 18 и TypeScript. Собираю production-ready SPA с JWT-авторизацией, ' +
+    'чистой архитектурой и адаптивным UI. Предыдущий опыт в блокчейн-инфраструктуре определяет моё отношение к ' +
+    'надёжности и системному мышлению.\n\n' +
+    'Открыт к позициям Junior Frontend (удалённо или Варшава). Готов выйти сразу.',
   hardSkills: [
-    'HTML5', 'CSS3', 'SCSS/SASS', 'JavaScript (ES6+)', 'TypeScript',
-    'Angular 18', 'RxJS', 'Webpack 5', 'Vite', 'Gulp', 'Angular CLI', 'npm',
-    'BEM', 'Bootstrap 5', 'Tailwind', 'Git', 'GitHub Actions',
-    'REST API', 'JWT', 'Chart.js', 'Responsive Design',
-  ],
-  softSkills: [
-    'Решение проблем', 'Системное мышление', 'Самообучение',
-    'Командная работа', 'Внимание к деталям',
+    { category: 'Core', skills: ['HTML5', 'CSS3', 'SCSS/SASS', 'JavaScript (ES6+)', 'TypeScript'] },
+    { category: 'Frameworks', skills: ['Angular 18', 'RxJS', 'Angular Signals'] },
+    { category: 'Build Tools', skills: ['Webpack 5', 'Vite', 'Gulp', 'Angular CLI', 'npm'] },
+    { category: 'Styling', skills: ['BEM', 'Bootstrap 5', 'Tailwind'] },
+    { category: 'Tools', skills: ['Git', 'GitHub Actions (CI/CD)'] },
+    { category: 'Other', skills: ['REST API', 'JWT', 'Chart.js', 'Responsive Design'] },
   ],
   experience: [
     {
-      company: 'DOUBLE TOP',
-      role: 'Инженер технической поддержки (Блокчейн-инфраструктура)',
-      period: '2021 — 2022',
+      company: 'Блокчейн-инфраструктура и технический контент',
+      role: 'Независимо',
+      period: '2021 — 2024',
       bullets: [
-        'Развертывание и мониторинг блокчейн-нод на Linux-серверах (Ubuntu).',
-        'Диагностика системных ошибок, работа с логами и автоматизация базовых процессов.',
-        'Взаимодействие с техническим сообществом для решения инфраструктурных задач.',
+        'Администрирование Linux-серверов с валидаторными нодами: диагностика, анализ логов, автоматизация развёртывания.',
+        'Ведение технического Telegram-канала: системная публикация контента, работа с комьюнити, дисциплина регулярного выпуска материалов.',
+        'Развитие системного мышления через параллельное управление рабочими процессами по 20+ протоколам — навык, который применяю в архитектуре фронтенд-приложений.',
       ],
     },
   ],
   education: [
-    {institution: 'ITLogia', specialty: 'Frontend-разработка', period: '2025 — 2026'},
-    {institution: 'ПГУ им. Т. Г. Шевченко', specialty: 'Безопасность информационных систем', period: '2014 — 2018'},
+    { institution: 'ITLogia', specialty: 'Frontend-разработка', period: '2025 — 2026' },
+    { institution: 'ПГУ им. Т. Г. Шевченко', specialty: 'Безопасность информационных систем', period: '2014 — 2018' },
   ],
   projects: [
     {
       name: 'Tik-Talk',
-      description: 'Приложение социальной сети на Angular 18, RxJS и Signals. Профили пользователей, обмен сообщениями и обновления в реальном времени.',
-      tech: ['Angular 18', 'TypeScript', 'RxJS', 'SCSS'],
+      description: 'SPA-соцсеть на Angular 18. JWT-авторизация с автоматической ротацией токенов через HTTP-интерсептор, route guards, управление состоянием через Signals, drag & drop загрузка аватара, кастомные директивы и pipe\'ы. Регистрация через Telegram-бот.',
+      tech: ['Angular 18', 'TypeScript', 'RxJS', 'Signals', 'SCSS'],
       github: 'https://github.com/IceFrosTv3/tik-talk',
       demo: 'https://icefrostv3.github.io/tik-talk/',
     },
     {
-      name: 'Quiz App',
-      description: 'Интерактивная викторина с логикой вопросов и подсчётом результатов. Акцент на управление состоянием и чистую архитектуру кода.',
-      tech: ['TypeScript', 'Webpack 5'],
-      github: 'https://github.com/IceFrosTv3/quiz',
-    },
-    {
-      name: 'Personal Finance Tracker',
-      description: 'Приложение для отслеживания финансов с графиками и визуализацией данных.',
-      tech: ['TypeScript', 'Vite', 'Chart.js', 'Bootstrap 5'],
-      github: 'https://github.com/IceFrosTv3/Personal-Finance-Tracker',
-    },
-    {
       name: 'Freelance Studio',
-      description: 'Комплексное приложение для управления бизнесом с календарём, таблицами данных и обработкой форм.',
-      tech: ['JavaScript', 'Bootstrap 5', 'jQuery', 'REST API'],
+      description: 'Vanilla JS SPA для управления фрилансерами и заказами. JWT-авторизация с автообновлением токенов при 401, полный CRUD с загрузкой аватаров, дашборд со статистикой, FullCalendar, DataTables, Select2, XSS-защита, собственный SPA-роутер.',
+      tech: ['JavaScript', 'Webpack 5', 'SCSS', 'JWT'],
       github: 'https://github.com/IceFrosTv3/Freelance-Studio',
     },
     {
+      name: 'Lumincash',
+      description: 'TypeScript SPA без фреймворка — собственный hash-роутер и компонентная система с нуля. JWT-авторизация с автообновлением, CRUD для доходов/расходов и категорий, дашборд Chart.js с фильтрами по периодам, пагинация, модалки, toast-уведомления, тёмная тема с localStorage, адаптивный layout.',
+      tech: ['TypeScript', 'Vite', 'Chart.js', 'JWT'],
+      github: 'https://github.com/IceFrosTv3/Personal-Finance-Tracker',
+    },
+    {
+      name: 'Quiz App',
+      description: 'TypeScript SPA с кастомной конфигурацией Webpack 5. Hash-роутер без фреймворка, JWT с автоматической ротацией токенов, 7 маршрутов: регистрация, вход, выбор теста, прохождение с таймером, результаты, история прохождений.',
+      tech: ['TypeScript', 'Webpack 5', 'SCSS', 'JWT'],
+      github: 'https://github.com/IceFrosTv3/quiz',
+    },
+    {
       name: 'Stream Vibe',
-      description: 'Адаптивный UI стриминговой платформы с компонентной архитектурой, fluid-типографикой через clamp() и JS-модулями: табы, слайдеры, видеоплеер, маска ввода.',
-      tech: ['JavaScript', 'JSX', 'SCSS', 'BEM', 'Vite', 'Minista'],
+      description: '6-страничная статическая платформа для стриминга. React — только JSX-шаблонизатор на этапе сборки, в браузер отдаётся чистый HTML. Proxy-based BaseComponent, ARIA-доступные табы и combobox, fluid-типографика через clamp(), Swiper.js, iMask, кастомный видеоплеер.',
+      tech: ['Minista', 'JSX', 'JavaScript', 'SCSS', 'BEM'],
       github: 'https://github.com/IceFrosTv3/stream-vibe',
       demo: 'https://icefrostv3.github.io/stream-vibe/',
     },
@@ -100,25 +98,23 @@ export const cvRu: CvData = {
     },
   ],
   languages: [
-    {name: 'Русский', level: 'Родной'},
-    {name: 'Польский', level: 'B1'},
-    {name: 'Английский', level: 'A2 (активное изучение)'},
+    { name: 'Русский', level: 'Родной' },
+    { name: 'Польский', level: 'B1 (разговорный, активно изучаю)' },
+    { name: 'Английский', level: 'A2 (базовый, активно улучшаю)' },
   ],
   references: [
     {
       name: 'Alexander Chernyavskiy',
       role: 'DOUBLE TOP / Retro Lead',
       contacts: [
-        {type: 'Telegram', value: 'feeeniqs'},
-        {type: 'Instagram', value: 'feeeniqs'},
+        { type: 'Telegram', value: 'feeeniqs' },
       ],
     },
     {
       name: 'Pavel Kutergin',
       role: 'ITLogia / Mentor',
       contacts: [
-        {type: 'Telegram', value: 'p_kutergin'},
-        {type: 'Instagram', value: 'pavel-kutergin'},
+        { type: 'Telegram', value: 'p_kutergin' },
       ],
     },
   ],

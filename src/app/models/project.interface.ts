@@ -5,4 +5,5 @@ export interface ProjectData {
   github: string;
   demo?: string;
   screenshot?: string;
+  requiresBackend?: boolean;
 }

@@ -20,6 +20,8 @@
         <a [href]="project.demo" target="_blank" rel="noopener" class="card__btn card__btn--primary">
           Live Demo
         </a>
+      } @else if (project.requiresBackend) {
+        <span class="card__badge">Backend API required</span>
       }
       <a [href]="project.github" target="_blank" rel="noopener" class="card__btn card__btn--secondary">
         Source Code

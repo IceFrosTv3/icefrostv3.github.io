@@ -8,35 +8,33 @@ export const cvPl: CvData = {
     phones: ['+373-775-522-44', '+48 736 100 736'],
     email: 'chaos95kill@gmail.com',
     location: 'Warszawa, Polska',
-    relocation: 'Gotowy do relokacji',
+    relocation: 'Otwarty na pracę zdalną lub w biurze w Polsce',
     github: 'IceFrosTv3',
     telegram: 'IceFrosTv3',
     linkedin: 'IceFrosTv3',
-    instagram: 'IceFrosTv3',
   },
   profile:
-    'Frontend Developer z technicznym doświadczeniem i ponad rokiem intensywnej nauki. Skupiony na pisaniu czystego, ' +
-    'czytelnego kodu i zrozumieniu architektury rozwiązań. Doświadczenie z rzeczywistymi systemami technicznymi ' +
-    '(serwery, węzły blockchain), co wzmocniło myślenie systemowe i poczucie odpowiedzialności. Gotowy do relokacji.',
+    'Frontend Developer ze specjalizacją w Angular 18 i TypeScript. Buduję production-ready SPA z uwierzytelnianiem JWT, ' +
+    'czystą architekturą i responsywnym UI. Wcześniejsze doświadczenie z infrastrukturą blockchain kształtuje moje podejście ' +
+    'do niezawodności i myślenia systemowego.\n\n' +
+    'Otwarty na stanowiska Junior Frontend (Warszawa lub zdalnie). Dostępny od zaraz.',
   hardSkills: [
-    'HTML5', 'CSS3', 'SCSS/SASS', 'JavaScript (ES6+)', 'TypeScript',
-    'Angular 18', 'RxJS', 'Webpack 5', 'Vite', 'Gulp', 'Angular CLI', 'npm',
-    'BEM', 'Bootstrap 5', 'Tailwind', 'Git', 'GitHub Actions',
-    'REST API', 'JWT', 'Chart.js', 'Responsive Design',
-  ],
-  softSkills: [
-    'Rozwiązywanie problemów', 'Myślenie systemowe', 'Samokształcenie',
-    'Praca zespołowa', 'Dbałość o szczegóły',
+    { category: 'Core', skills: ['HTML5', 'CSS3', 'SCSS/SASS', 'JavaScript (ES6+)', 'TypeScript'] },
+    { category: 'Frameworks', skills: ['Angular 18', 'RxJS', 'Angular Signals'] },
+    { category: 'Build Tools', skills: ['Webpack 5', 'Vite', 'Gulp', 'Angular CLI', 'npm'] },
+    { category: 'Styling', skills: ['BEM', 'Bootstrap 5', 'Tailwind'] },
+    { category: 'Tools', skills: ['Git', 'GitHub Actions (CI/CD)'] },
+    { category: 'Other', skills: ['REST API', 'JWT', 'Chart.js', 'Responsive Design'] },
   ],
   experience: [
     {
-      company: 'DOUBLE TOP',
-      role: 'Inżynier wsparcia technicznego (Infrastruktura Blockchain)',
-      period: '2021 — 2022',
+      company: 'Infrastruktura Blockchain i treści techniczne',
+      role: 'Niezależnie',
+      period: '2021 — 2024',
       bullets: [
-        'Wdrażanie i monitorowanie węzłów blockchain na serwerach Linux (Ubuntu).',
-        'Diagnostyka błędów systemowych, analiza logów i automatyzacja podstawowych procesów.',
-        'Współpraca ze społecznością techniczną w celu rozwiązywania problemów infrastrukturalnych.',
+        'Administrowanie serwerami Linux z węzłami walidatorów blockchain: diagnostyka, analiza logów, automatyzacja wdrożeń.',
+        'Prowadzenie technicznego kanału Telegram: systematyczna publikacja treści, praca ze społecznością, konsekwentna dyscyplina wydawnicza.',
+        'Rozwinięcie myślenia systemowego przez zarządzanie równoległymi procesami w 20+ protokołach — umiejętność, którą stosuję w architekturze aplikacji frontendowych.',
       ],
     },
   ],
@@ -47,33 +45,33 @@ export const cvPl: CvData = {
   projects: [
     {
       name: 'Tik-Talk',
-      description: 'Aplikacja sieci społecznościowej zbudowana na Angular 18, RxJS i Signals. Profile użytkowników, wiadomości i aktualizacje w czasie rzeczywistym.',
-      tech: ['Angular 18', 'TypeScript', 'RxJS', 'SCSS'],
+      description: 'SPA sieci społecznościowej w Angular 18. Uwierzytelnianie JWT z automatyczną rotacją tokenów przez interceptor HTTP, route guards, stan reaktywny przez Signals, drag & drop awatara, własne dyrektywy i pipe\'y. Rejestracja przez bota Telegram.',
+      tech: ['Angular 18', 'TypeScript', 'RxJS', 'Signals', 'SCSS'],
       github: 'https://github.com/IceFrosTv3/tik-talk',
       demo: 'https://icefrostv3.github.io/tik-talk/',
     },
     {
-      name: 'Quiz App',
-      description: 'Interaktywny quiz z logiką pytań i obliczaniem wyników. Nacisk na zarządzanie stanem i czystą architekturę kodu.',
-      tech: ['TypeScript', 'Webpack 5'],
-      github: 'https://github.com/IceFrosTv3/quiz',
-    },
-    {
-      name: 'Personal Finance Tracker',
-      description: 'Aplikacja do śledzenia finansów z wykresami i wizualizacją danych.',
-      tech: ['TypeScript', 'Vite', 'Chart.js', 'Bootstrap 5'],
-      github: 'https://github.com/IceFrosTv3/Personal-Finance-Tracker',
-    },
-    {
       name: 'Freelance Studio',
-      description: 'Kompleksowa aplikacja do zarządzania biznesem z kalendarzem, tabelami danych i obsługą formularzy.',
-      tech: ['JavaScript', 'Bootstrap 5', 'jQuery', 'REST API'],
+      description: 'Vanilla JS SPA do zarządzania freelancerami i zleceniami. JWT z auto-odświeżaniem przy 401, pełny CRUD z uploadem avatarów, dashboard ze statystykami, FullCalendar, DataTables, Select2, ochrona XSS, własny router SPA.',
+      tech: ['JavaScript', 'Webpack 5', 'SCSS', 'JWT'],
       github: 'https://github.com/IceFrosTv3/Freelance-Studio',
     },
     {
+      name: 'Lumincash',
+      description: 'TypeScript SPA bez frameworka — własny hash router i system komponentów od podstaw. JWT z auto-odświeżaniem, pełny CRUD przychodów/wydatków i kategorii, dashboard Chart.js z filtrami okresów, paginacja, modale, powiadomienia toast, ciemny motyw z localStorage, responsywny layout.',
+      tech: ['TypeScript', 'Vite', 'Chart.js', 'JWT'],
+      github: 'https://github.com/IceFrosTv3/Personal-Finance-Tracker',
+    },
+    {
+      name: 'Quiz App',
+      description: 'TypeScript SPA z własną konfiguracją Webpack 5. Hash router bez frameworka, JWT z automatyczną rotacją tokenów, 7 tras: rejestracja, logowanie, wybór testu, test z timerem, wyniki, historia.',
+      tech: ['TypeScript', 'Webpack 5', 'SCSS', 'JWT'],
+      github: 'https://github.com/IceFrosTv3/quiz',
+    },
+    {
       name: 'Stream Vibe',
-      description: 'Responsywny UI platformy streamingowej z architekturą komponentową, fluid typography via clamp() i modułami JS: zakładki, slidery, odtwarzacz wideo, maska wejścia.',
-      tech: ['JavaScript', 'JSX', 'SCSS', 'BEM', 'Vite', 'Minista'],
+      description: '6-stronicowa statyczna platforma streamingowa. React jako silnik szablonów JSX tylko na etapie budowania — przeglądarka otrzymuje czysty HTML. Proxy-based BaseComponent, ARIA-dostępne zakładki i combobox, fluid typography przez clamp(), Swiper.js, iMask, własny odtwarzacz wideo.',
+      tech: ['Minista', 'JSX', 'JavaScript', 'SCSS', 'BEM'],
       github: 'https://github.com/IceFrosTv3/stream-vibe',
       demo: 'https://icefrostv3.github.io/stream-vibe/',
     },
@@ -101,8 +99,8 @@ export const cvPl: CvData = {
   ],
   languages: [
     { name: 'Rosyjski', level: 'Ojczysty' },
-    { name: 'Polski', level: 'B1' },
-    { name: 'Angielski', level: 'A2 (aktywna nauka)' },
+    { name: 'Polski', level: 'B1 (konwersacyjny, aktywnie się uczę)' },
+    { name: 'Angielski', level: 'A2 (podstawowy, aktywnie poprawiam)' },
   ],
   references: [
     {
@@ -110,7 +108,6 @@ export const cvPl: CvData = {
       role: 'DOUBLE TOP / Retro Lead',
       contacts: [
         { type: 'Telegram', value: 'feeeniqs' },
-        { type: 'Instagram', value: 'feeeniqs' },
       ],
     },
     {
@@ -118,7 +115,6 @@ export const cvPl: CvData = {
       role: 'ITLogia / Mentor',
       contacts: [
         { type: 'Telegram', value: 'p_kutergin' },
-        { type: 'Instagram', value: 'pavel-kutergin' },
       ],
     },
   ],
