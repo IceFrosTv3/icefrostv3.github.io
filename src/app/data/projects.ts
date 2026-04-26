@@ -3,6 +3,7 @@ import {ProjectData} from '../models/project.interface';
 export const PROJECTS: ProjectData[] = [
   {
     name: 'Tik-Talk',
+    screenshot: 'assets/screenshots/tik-talk.png',
     description: 'Angular 18 SPA with JWT auth (HTTP interceptor + auto-refresh), route guards, reactive state via Signals, and drag & drop avatar upload.',
     tech: ['Angular 18', 'TypeScript', 'RxJS', 'Signals', 'SCSS'],
     github: 'https://github.com/IceFrosTv3/tik-talk',
@@ -10,6 +11,7 @@ export const PROJECTS: ProjectData[] = [
   },
   {
     name: 'Quiz App',
+    screenshot: 'assets/screenshots/quiz.png',
     description: 'Angular 18 SPA with JWT auth (HTTP interceptor + auto-refresh), timed multiple-choice tests with navigation, detailed results breakdown, Angular Material UI, strict TypeScript.',
     tech: ['Angular 18', 'TypeScript', 'RxJS', 'Angular Material', 'SCSS'],
     github: 'https://github.com/IceFrosTv3/quiz',
@@ -17,6 +19,7 @@ export const PROJECTS: ProjectData[] = [
   },
   {
     name: 'Stream Vibe',
+    screenshot: 'assets/screenshots/stream-vibe.png',
     description: 'Static streaming platform built with Minista (SSG). JSX templates at build-time, vanilla JS in browser, custom Proxy-based state, ARIA-accessible UI components.',
     tech: ['Minista', 'JSX', 'JavaScript', 'SCSS', 'BEM'],
     github: 'https://github.com/IceFrosTv3/stream-vibe',
@@ -24,6 +27,7 @@ export const PROJECTS: ProjectData[] = [
   },
   {
     name: 'Freelance Studio',
+    screenshot: 'assets/screenshots/freelance-studio.png',
     description: 'Vanilla JS SPA for managing freelancers and orders. JWT auth, full CRUD, FullCalendar, DataTables, Select2, custom router. No framework.',
     tech: ['JavaScript', 'Webpack 5', 'SCSS', 'JWT'],
     github: 'https://github.com/IceFrosTv3/Freelance-Studio',
@@ -31,6 +35,7 @@ export const PROJECTS: ProjectData[] = [
   },
   {
     name: 'Future Tech',
+    screenshot: 'assets/screenshots/future-tech.png',
     description: 'Multi-page responsive website for a tech news and media platform with custom components and adaptive sizing.',
     tech: ['HTML5', 'SCSS', 'BEM', 'JavaScript'],
     github: 'https://github.com/IceFrosTv3/future-tech',
@@ -38,6 +43,7 @@ export const PROJECTS: ProjectData[] = [
   },
   {
     name: 'Lumincash',
+    screenshot: 'assets/screenshots/lumincash.png',
     description: 'TypeScript SPA with custom hash router (no framework), JWT auth, Chart.js visualizations, period filters, dark theme, OOP architecture.',
     tech: ['TypeScript', 'Vite', 'Chart.js', 'JWT'],
     github: 'https://github.com/IceFrosTv3/Personal-Finance-Tracker',
@@ -45,6 +51,7 @@ export const PROJECTS: ProjectData[] = [
   },
   {
     name: 'Positivus',
+    screenshot: 'assets/screenshots/positivus.png',
     description: 'Responsive commercial landing page with modern UI and pixel-perfect design.',
     tech: ['HTML5', 'SCSS', 'BEM'],
     github: 'https://github.com/IceFrosTv3/positivus',
@@ -52,6 +59,7 @@ export const PROJECTS: ProjectData[] = [
   },
   {
     name: 'Kropp Fitness',
+    screenshot: 'assets/screenshots/kropp-fitness.png',
     description: 'Responsive fitness landing page with interactive maps and sliders.',
     tech: ['HTML5', 'SCSS', 'JavaScript'],
     github: 'https://github.com/IceFrosTv3/kropp-fitness',
