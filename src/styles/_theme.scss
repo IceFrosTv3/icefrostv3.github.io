@@ -1,26 +1,37 @@
+@use 'mixins' as *;
+
 :root,
 [data-theme='light'] {
-  --bg-primary: #f8f9fb;
-  --bg-secondary: #eef1f6;
-  --bg-surface: #f0f2f7;
-  --text-primary: #2d3748;
-  --text-secondary: #5a6578;
-  --text-muted: #8893a4;
-  --accent: #2563eb;
-  --accent-hover: #1d4ed8;
-  --border: #d8dfe8;
-  --shadow: rgba(0, 0, 0, 0.06);
+  /* Мягкий переход от бледно-сиреневого к белому */
+  --bg-primary: linear-gradient(135deg, #f3f4f6 0%, #e0e7ff 100%);
+  --bg-secondary: rgba(255, 255, 255, 0.6);
+  --bg-surface: rgba(255, 255, 255, 0.8);
+  --text-primary: #1e1b4b;
+  --text-secondary: #4f46e5;
+  --text-muted: #6b7280;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --border: rgba(99, 102, 241, 0.2);
+  --border-line: 1px solid var(--border);
+  --shadow: rgba(0, 0, 0, 0.05);
+
+
+  // Fluid spacing tokens
+  --fluid-md: #{fluid(32, 16)}; // 16px → 32px (container padding, card padding)
+  --fluid-lg: #{fluid(64, 32)}; // 32px → 64px (gaps, margins)
+  --section-py: #{fluid(96, 64)}; // 64px → 96px (section vertical padding)
 }
 
 [data-theme='dark'] {
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
-  --bg-surface: #1e293b;
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --accent: #3b82f6;
-  --accent-hover: #1d4ed8;
-  --border: #334155;
-  --shadow: rgba(0, 0, 0, 0.3);
+  /* Радиальное свечение сверху по центру */
+  --bg-primary: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #030712 50%, #000000 100%);
+  --bg-secondary: rgba(17, 24, 39, 0.4);
+  --bg-surface: rgba(31, 41, 55, 0.3);
+  --text-primary: #f8fafc;
+  --text-secondary: #a5b4fc;
+  --text-muted: #8b89b0;
+  --accent: #818cf8;
+  --accent-hover: #6366f1;
+  --border: rgba(255, 255, 255, 0.08);
+  --shadow: rgba(0, 0, 0, 0.4);
 }

@@ -1,9 +1,10 @@
+<a href="#main-content" class="skip-link">Skip to main content</a>
 @if (isCvRoute()) {
   <app-cv-header />
 } @else {
   <app-header />
 }
-<main [class.cv-layout]="isCvRoute()">
+<main id="main-content" [class.cv-layout]="isCvRoute()">
   <router-outlet />
 </main>
 <app-footer />

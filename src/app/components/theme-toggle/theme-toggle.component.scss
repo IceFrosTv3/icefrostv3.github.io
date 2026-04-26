@@ -7,9 +7,7 @@
   border-radius: $radius-full;
   width: 40px;
   height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
   color: var(--text-primary);
   transition: all $transition-normal;
 

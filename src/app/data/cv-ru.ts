@@ -23,7 +23,7 @@ export const cvRu: CvData = {
     { category: 'Frameworks', skills: ['Angular 18', 'RxJS', 'Angular Signals'] },
     { category: 'Build Tools', skills: ['Webpack 5', 'Vite', 'Gulp', 'Angular CLI', 'npm'] },
     { category: 'Styling', skills: ['BEM', 'Bootstrap 5', 'Tailwind'] },
-    { category: 'Tools', skills: ['Git', 'GitHub Actions (CI/CD)'] },
+    { category: 'Tools', skills: ['Git', 'GitHub Actions (CI/CD)', 'ESLint'] },
     { category: 'Other', skills: ['REST API', 'JWT', 'Chart.js', 'Responsive Design'] },
   ],
   experience: [
@@ -51,6 +51,12 @@ export const cvRu: CvData = {
       demo: 'https://icefrostv3.github.io/tik-talk/',
     },
     {
+      name: 'Quiz App',
+      description: 'SPA на Angular 18 с JWT-авторизацией (HTTP-интерсептор + автообновление токенов), тестирование с таймером и навигацией между вопросами, детальный разбор результатов, Angular Material, строгий TypeScript.',
+      tech: ['Angular 18', 'TypeScript', 'RxJS', 'Angular Material', 'SCSS'],
+      github: 'https://github.com/IceFrosTv3/quiz',
+    },
+    {
       name: 'Freelance Studio',
       description: 'Vanilla JS SPA для управления фрилансерами и заказами. JWT-авторизация с автообновлением токенов при 401, полный CRUD с загрузкой аватаров, дашборд со статистикой, FullCalendar, DataTables, Select2, XSS-защита, собственный SPA-роутер.',
       tech: ['JavaScript', 'Webpack 5', 'SCSS', 'JWT'],
@@ -61,12 +67,6 @@ export const cvRu: CvData = {
       description: 'TypeScript SPA без фреймворка — собственный hash-роутер и компонентная система с нуля. JWT-авторизация с автообновлением, CRUD для доходов/расходов и категорий, дашборд Chart.js с фильтрами по периодам, пагинация, модалки, toast-уведомления, тёмная тема с localStorage, адаптивный layout.',
       tech: ['TypeScript', 'Vite', 'Chart.js', 'JWT'],
       github: 'https://github.com/IceFrosTv3/Personal-Finance-Tracker',
-    },
-    {
-      name: 'Quiz App',
-      description: 'TypeScript SPA с кастомной конфигурацией Webpack 5. Hash-роутер без фреймворка, JWT с автоматической ротацией токенов, 7 маршрутов: регистрация, вход, выбор теста, прохождение с таймером, результаты, история прохождений.',
-      tech: ['TypeScript', 'Webpack 5', 'SCSS', 'JWT'],
-      github: 'https://github.com/IceFrosTv3/quiz',
     },
     {
       name: 'Stream Vibe',
@@ -111,10 +111,10 @@ export const cvRu: CvData = {
       ],
     },
     {
-      name: 'Pavel Kutergin',
-      role: 'ITLogia / Mentor',
+      name: 'Артём Завьялов',
+      role: 'ITLogia / Ментор',
       contacts: [
-        { type: 'Telegram', value: 'p_kutergin' },
+        { type: 'Telegram', value: 'JohnShepard1211' },
       ],
     },
   ],

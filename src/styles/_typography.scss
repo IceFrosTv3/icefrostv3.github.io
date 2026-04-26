@@ -1,3 +1,4 @@
+@use 'variables' as *;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 body {
@@ -5,8 +6,9 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: var(--text-primary);
-  background-color: var(--bg-primary);
-  transition: color 0.3s ease, background-color 0.3s ease;
+  background: var(--bg-primary);
+  background-attachment: fixed;
+  transition: color $transition-normal, background-color $transition-normal;
   margin: 0;
 }
 
@@ -18,9 +20,18 @@ h1, h2, h3, h4 {
 a {
   color: var(--accent);
   text-decoration: none;
-  transition: color 0.15s ease;
+  transition: color $transition-fast;
 
   &:hover {
     color: var(--accent-hover);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

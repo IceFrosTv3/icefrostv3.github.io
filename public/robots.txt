@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://icefrostv3.github.io/sitemap.xml

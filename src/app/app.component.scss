@@ -1,3 +1,23 @@
+@use '../styles/variables' as *;
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: $spacing-md;
+  z-index: 9999;
+  padding: $spacing-sm $spacing-md;
+  background: var(--accent);
+  color: #fff;
+  border-radius: $radius-md;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0s;
+
+  &:focus {
+    top: $spacing-md;
+  }
+}
+
 main {
   padding-top: 80px;
   min-height: 100dvh;
@@ -8,5 +28,9 @@ main {
 
   @media print {
     padding-top: 0;
+
+    &.cv-layout {
+      padding-top: 0;
+    }
   }
 }

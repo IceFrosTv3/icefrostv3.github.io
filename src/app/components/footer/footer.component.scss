@@ -1,7 +1,7 @@
 @use '../../../styles/variables' as *;
 
 .footer {
-  border-top: 1px solid var(--border);
+  border-top: var(--border-line);
   padding: $spacing-lg;
   text-align: center;
 

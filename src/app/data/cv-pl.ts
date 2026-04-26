@@ -23,7 +23,7 @@ export const cvPl: CvData = {
     { category: 'Frameworks', skills: ['Angular 18', 'RxJS', 'Angular Signals'] },
     { category: 'Build Tools', skills: ['Webpack 5', 'Vite', 'Gulp', 'Angular CLI', 'npm'] },
     { category: 'Styling', skills: ['BEM', 'Bootstrap 5', 'Tailwind'] },
-    { category: 'Tools', skills: ['Git', 'GitHub Actions (CI/CD)'] },
+    { category: 'Tools', skills: ['Git', 'GitHub Actions (CI/CD)', 'ESLint'] },
     { category: 'Other', skills: ['REST API', 'JWT', 'Chart.js', 'Responsive Design'] },
   ],
   experience: [
@@ -51,6 +51,12 @@ export const cvPl: CvData = {
       demo: 'https://icefrostv3.github.io/tik-talk/',
     },
     {
+      name: 'Quiz App',
+      description: 'SPA w Angular 18 z uwierzytelnianiem JWT (interceptor HTTP + auto-odświeżanie tokenów), testy z timerem i nawigacją między pytaniami, szczegółowe podsumowanie wyników, Angular Material, strict TypeScript.',
+      tech: ['Angular 18', 'TypeScript', 'RxJS', 'Angular Material', 'SCSS'],
+      github: 'https://github.com/IceFrosTv3/quiz',
+    },
+    {
       name: 'Freelance Studio',
       description: 'Vanilla JS SPA do zarządzania freelancerami i zleceniami. JWT z auto-odświeżaniem przy 401, pełny CRUD z uploadem avatarów, dashboard ze statystykami, FullCalendar, DataTables, Select2, ochrona XSS, własny router SPA.',
       tech: ['JavaScript', 'Webpack 5', 'SCSS', 'JWT'],
@@ -61,12 +67,6 @@ export const cvPl: CvData = {
       description: 'TypeScript SPA bez frameworka — własny hash router i system komponentów od podstaw. JWT z auto-odświeżaniem, pełny CRUD przychodów/wydatków i kategorii, dashboard Chart.js z filtrami okresów, paginacja, modale, powiadomienia toast, ciemny motyw z localStorage, responsywny layout.',
       tech: ['TypeScript', 'Vite', 'Chart.js', 'JWT'],
       github: 'https://github.com/IceFrosTv3/Personal-Finance-Tracker',
-    },
-    {
-      name: 'Quiz App',
-      description: 'TypeScript SPA z własną konfiguracją Webpack 5. Hash router bez frameworka, JWT z automatyczną rotacją tokenów, 7 tras: rejestracja, logowanie, wybór testu, test z timerem, wyniki, historia.',
-      tech: ['TypeScript', 'Webpack 5', 'SCSS', 'JWT'],
-      github: 'https://github.com/IceFrosTv3/quiz',
     },
     {
       name: 'Stream Vibe',
@@ -111,10 +111,10 @@ export const cvPl: CvData = {
       ],
     },
     {
-      name: 'Pavel Kutergin',
+      name: 'Artem Zavyalov',
       role: 'ITLogia / Mentor',
       contacts: [
-        { type: 'Telegram', value: 'p_kutergin' },
+        { type: 'Telegram', value: 'JohnShepard1211' },
       ],
     },
   ],

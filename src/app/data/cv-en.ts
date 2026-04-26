@@ -23,7 +23,7 @@ export const cvEn: CvData = {
     { category: 'Frameworks', skills: ['Angular 18', 'RxJS', 'Angular Signals'] },
     { category: 'Build Tools', skills: ['Webpack 5', 'Vite', 'Gulp', 'Angular CLI', 'npm'] },
     { category: 'Styling', skills: ['BEM', 'Bootstrap 5', 'Tailwind'] },
-    { category: 'Tools', skills: ['Git', 'GitHub Actions (CI/CD)'] },
+    { category: 'Tools', skills: ['Git', 'GitHub Actions (CI/CD)', 'ESLint'] },
     { category: 'Other', skills: ['REST API', 'JWT', 'Chart.js', 'Responsive Design'] },
   ],
   experience: [
@@ -51,6 +51,12 @@ export const cvEn: CvData = {
       demo: 'https://icefrostv3.github.io/tik-talk/',
     },
     {
+      name: 'Quiz App',
+      description: 'Angular 18 SPA with JWT auth (HTTP interceptor + auto-refresh), timed multiple-choice tests with navigation, detailed results breakdown, Angular Material UI components, strict TypeScript.',
+      tech: ['Angular 18', 'TypeScript', 'RxJS', 'Angular Material', 'SCSS'],
+      github: 'https://github.com/IceFrosTv3/quiz',
+    },
+    {
       name: 'Freelance Studio',
       description: 'Vanilla JS SPA for managing freelancers and orders. JWT auth with auto-refresh on 401, full CRUD with avatar upload, dashboard with statistics, FullCalendar integration, DataTables, Select2, XSS protection, custom SPA router.',
       tech: ['JavaScript', 'Webpack 5', 'SCSS', 'JWT'],
@@ -61,12 +67,6 @@ export const cvEn: CvData = {
       description: 'TypeScript SPA built without a framework — custom hash router and component system from scratch. JWT auth with auto-refresh, full CRUD for income/expenses and categories, Chart.js dashboard with period filters, pagination, modals, toast notifications, dark theme with localStorage persistence, responsive layout.',
       tech: ['TypeScript', 'Vite', 'Chart.js', 'JWT'],
       github: 'https://github.com/IceFrosTv3/Personal-Finance-Tracker',
-    },
-    {
-      name: 'Quiz App',
-      description: 'TypeScript SPA with custom Webpack 5 configuration. Framework-less hash router, JWT auth with auto-refresh, 7 routes: register, login, quiz selection, timed test, results, test history.',
-      tech: ['TypeScript', 'Webpack 5', 'SCSS', 'JWT'],
-      github: 'https://github.com/IceFrosTv3/quiz',
     },
     {
       name: 'Stream Vibe',
@@ -111,10 +111,10 @@ export const cvEn: CvData = {
       ],
     },
     {
-      name: 'Pavel Kutergin',
+      name: 'Artem Zavyalov',
       role: 'ITLogia / Mentor',
       contacts: [
-        { type: 'Telegram', value: 'p_kutergin' },
+        { type: 'Telegram', value: 'JohnShepard1211' },
       ],
     },
   ],

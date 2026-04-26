@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use 'variables' as *;
 
 // Breakpoint mixins
 @mixin desktop {
@@ -17,10 +18,31 @@
   @media (max-width: 480.98px) { @content; }
 }
 
+// Fluid scaling: linearly interpolates from $min px (at $fluid-min-width)
+// to $max px (at $fluid-max-width). Pass $toLaptop: true to scale only
+// from $fluid-laptop-width to $fluid-max-width instead.
+@function fluid($max, $min, $toLaptop: false) {
+  $maxViewport: $fluid-max-width;
+  $minViewport: if($toLaptop, $fluid-laptop-width, $fluid-min-width);
 
-// Fluid typography: scales between min and max based on viewport
+  $maxRem: math.div($max, 16);
+  $minRem: math.div($min, 16);
+  $maxVW:  math.div($maxViewport, 16);
+  $minVW:  math.div($minViewport, 16);
+
+  $slope:     math.div($maxRem - $minRem, $maxVW - $minVW);
+  $intercept: -$minVW * $slope + $minRem;
+
+  @return clamp(#{$minRem * 1rem}, #{$intercept * 1rem} + #{$slope * 100vw}, #{$maxRem * 1rem});
+}
+
+@function fluid-to-laptop($max, $min) {
+  @return fluid($max, $min, true);
+}
+
+// Fluid typography shorthand
 @mixin fluid-text($max, $min) {
-  font-size: clamp(#{$min}px, #{math.div($max, 1440) * 100}vw, #{$max}px);
+  font-size: fluid($max, $min);
 }
 
 // Flex center shorthand
@@ -43,14 +65,4 @@
   @media (hover: none) {
     &:active { @content; }
   }
-}
-
-// Visually hidden (screen readers only)
-@mixin visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  clip-path: inset(50%);
-  overflow: hidden;
-  white-space: nowrap;
 }

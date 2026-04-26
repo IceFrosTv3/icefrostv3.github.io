@@ -21,7 +21,7 @@
           Live Demo
         </a>
       } @else if (project.requiresBackend) {
-        <span class="card__badge">Backend API required</span>
+        <button type="button" class="card__btn card__btn--badge" disabled>Backend API required</button>
       }
       <a [href]="project.github" target="_blank" rel="noopener" class="card__btn card__btn--secondary">
         Source Code

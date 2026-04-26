@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {ThemeService} from '../../services/theme.service';
 
 @Component({
@@ -8,6 +8,5 @@ import {ThemeService} from '../../services/theme.service';
   styleUrl: './theme-toggle.component.scss'
 })
 export class ThemeToggleComponent {
-  constructor(protected themeService: ThemeService) {
-  }
+  protected themeService = inject(ThemeService)
 }

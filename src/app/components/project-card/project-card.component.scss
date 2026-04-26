@@ -6,7 +6,7 @@
   flex-direction: column;
   height: 100%;
   border-radius: $radius-lg;
-  border: 1px solid var(--border);
+  border: var(--border-line);
   background: var(--bg-surface);
   overflow: hidden;
   transition: all $transition-normal;
@@ -36,15 +36,11 @@
   }
 
   &__body {
-    padding: $spacing-lg;
+    padding: var(--fluid-md);
     display: flex;
     flex-direction: column;
     gap: $spacing-md;
     flex: 1;
-
-    @include mobile-s {
-      padding: $spacing-md;
-    }
   }
 
   &__title {
@@ -73,12 +69,12 @@
     display: flex;
     gap: $spacing-md;
 
-    @include desktop {
-      gap: $spacing-sm;
-    }
-
     @include tablet {
-      gap: $spacing-md;
+      .card__btn--primary,
+      .card__btn--secondary {
+        flex: 1;
+        max-width: 50%;
+      }
     }
 
     @include mobile-s {
@@ -86,28 +82,19 @@
     }
   }
 
-  &__badge {
-    display: inline-flex;
-    align-items: center;
-    padding: $spacing-xs $spacing-sm;
-    border-radius: $radius-md;
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    border: 1px solid var(--border);
-    background: var(--bg-secondary);
-    white-space: nowrap;
-  }
-
   &__btn {
+    @include flex-center($inline: true);
     padding: $spacing-sm $spacing-md;
     border-radius: $radius-md;
     font-size: 0.85rem;
     font-weight: 600;
+    font-family: inherit;
     text-decoration: none;
-    justify-content: center;
+    user-select: none;
+    white-space: nowrap;
     transition: all $transition-fast;
 
-    @include mobile {
+    @include mobile-s {
       padding: $spacing-md;
       font-size: 1rem;
     }
@@ -125,13 +112,21 @@
     }
 
     &--secondary {
-      border: 1px solid var(--border);
+      border: var(--border-line);
       color: var(--text-secondary);
 
       @include hover {
         border-color: var(--accent);
         color: var(--accent);
       }
+    }
+
+    &--badge {
+      color: var(--text-muted);
+      border: var(--border-line);
+      background: var(--bg-secondary);
+      cursor: default;
+      transition: none;
     }
   }
 }

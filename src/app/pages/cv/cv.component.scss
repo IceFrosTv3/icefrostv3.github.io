@@ -9,8 +9,6 @@
   background: var(--bg-primary);
 
   &__header {
-    margin-bottom: $spacing-xl;
-    border-bottom: 2px solid var(--accent);
     padding-bottom: $spacing-lg;
   }
 
@@ -46,7 +44,7 @@
   h2 {
     font-size: 1.3rem;
     color: var(--accent);
-    border-bottom: 1px solid var(--border);
+    border-bottom: var(--border-line);
     padding-bottom: $spacing-xs;
     margin: 0 0 $spacing-md;
   }
@@ -100,24 +98,26 @@
   &__external-link {
     display: inline-flex;
     align-items: center;
+    column-gap: 2px;
     color: var(--accent);
     text-decoration: none;
     border: 1px solid var(--accent);
     border-radius: $radius-sm;
-    padding: 1px 6px;
+    padding: 4px 4px 4px 8px;
     font-weight: 600;
     transition: all $transition-fast;
-
-    &::after {
-      content: '\2197';
-      font-size: 0.75em;
-      margin-left: 3px;
-      vertical-align: super;
-    }
 
     @include hover {
       background: var(--accent);
       color: #fff;
+
+      svg {
+        transform: translate(3px, -3px);
+      }
+    }
+
+    svg {
+      transition: transform $transition-normal;
     }
   }
 
@@ -147,7 +147,7 @@
     padding: 0;
 
     &__header {
-      border-bottom: none;
+      border-bottom: none !important;
       padding-bottom: 2mm;
       margin-bottom: 4mm;
     }
